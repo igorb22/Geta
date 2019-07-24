@@ -1,2 +1,3 @@
-# Geta-Gerenciador-de-tarefas-dom-sticas
+# Geta
+
 Aplicativo móvel para gerenciamento de tarefas domésticas
