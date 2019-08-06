@@ -10,7 +10,7 @@ public class Task {
     private String dia;
     private String hora;
     private int idUsuario;
-    private int tarefaPessoal;
+    private boolean tarefaPessoal;
     private boolean foiRealizada;
     private int idTarefaPeriodica;
     private String data;
@@ -18,7 +18,7 @@ public class Task {
 
     public Task(){}
 
-    public Task(int idTarefa, String descricao, String dia, String hora, int idUsuario, int tarefaPessoal, boolean foiRealizada, int idTarefaPeriodica, String data) {
+    public Task(int idTarefa, String descricao, String dia, String hora, int idUsuario, boolean tarefaPessoal, boolean foiRealizada, int idTarefaPeriodica, String data) {
         this.idTarefa = idTarefa;
         this.descricao = descricao;
         this.dia = dia;
@@ -50,7 +50,7 @@ public class Task {
         this.idUsuario = idUsuario;
     }
 
-    public void setTarefaPessoal(int tarefaPessoal) {
+    public void setTarefaPessoal(boolean tarefaPessoal) {
         this.tarefaPessoal = tarefaPessoal;
     }
 
@@ -86,7 +86,7 @@ public class Task {
         return idUsuario;
     }
 
-    public int getTarefaPessoal() {
+    public boolean getTarefaPessoal() {
         return tarefaPessoal;
     }
 

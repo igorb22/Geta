@@ -29,6 +29,7 @@ public class TaskFragment extends Fragment {
     }
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -45,13 +46,16 @@ public class TaskFragment extends Fragment {
 
         ArrayList<Task> task = new ArrayList<>();
 
-        Task l = new Task(1,"Minha primeira Tarefa","segunda","15:45",1,1,false,1,"24/05/2019");
+        /*Task l = new Task(1,"Minha primeira Tarefa","segunda","15:45",1,1,false,1,"24/05/2019");
         task.add(l);
         task.add(l);
         task.add(l);
-        task.add(l);
+        task.add(l);*/
+        Conexao c = new Conexao();
 
-        mAdapter = new TaskAdapter(task);
+        c.loadTasks(getActivity());
+
+        mAdapter = new TaskAdapter(c.getTasks());
         mRecyclerView.setAdapter(mAdapter);
 
         // Configurando um dividr entre linhas, para uma melhor visualização.
